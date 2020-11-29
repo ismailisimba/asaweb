@@ -1,0 +1,269 @@
+.container3000{
+
+    display: block;
+    margin: 0 auto;
+    margin-top: 75px;
+
+    width: 85%;
+    min-height: 600px;
+
+    font-family: "Montserrat";
+
+    background-color: white;
+}
+
+.homepage{
+    display: block;
+    width: 100%;
+    min-height: 600px;
+
+    background-color: transparent;
+
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.homepage button {
+
+    border: none;
+    background-color: #76bc43;
+    color: #1e4488;
+    
+
+    padding: 6px 12px;
+    
+    
+    font-size: 16px;
+    font-weight: 600;
+    
+    letter-spacing: 1px;
+    box-sizing: border-box;
+
+    box-shadow: 1px 1px 5px 0.2px black;
+
+    margin-top: 6px;
+
+    min-width: 250px;
+
+    margin-bottom: 6px;
+    box-sizing: border-box;
+
+  
+}
+
+
+.homepage button:hover {
+
+    background-color: #1e4488;
+    color: white;
+
+    box-shadow: none;
+
+}
+
+
+.campusContainer{
+
+    display: block;
+    width: 100%;
+    min-height: 600px;
+    padding-top: 36px;
+
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.asaitemtit{
+
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: #1e4488;
+
+    cursor: pointer;
+}
+
+
+.itemasacontainer{
+
+    display: block;
+
+    width: 100%;
+    min-height: 600px;
+
+    background-color: transparent;
+
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.itemasachild{
+    background-color: transparent;
+    text-align: center;
+
+    width: 85%;
+    min-height: 50px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    box-sizing: border-box;
+}
+
+.itemasachild:first-child{
+
+    padding-top: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.itemasachild:nth-child(2){
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.basicitemdeets{
+
+    margin: 0px 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    font-size: 14px;
+}
+
+.basicitemdeets span{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.itemasachild:nth-child(3){
+text-align: left;
+padding: 18px 14px;
+font-weight: 600;
+}
+
+
+
+.itemasachild:nth-child(3) span{
+   font-weight: 400;
+   letter-spacing: 1px;
+    }
+
+.itemasachild:nth-child(4){
+display: flex;
+flex-flow: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.mycustpiccontainer{
+
+    width: 210px;
+    height: 269px;
+    padding: 6px 12px;
+    margin: 12px 12px;
+    background-color: #76bc43;
+    box-sizing: border-box;
+
+    background-image: url("https://www.istafrica.com/uploaded/faculty/2018-19_(resized)/scottab.png");
+    background-position: center;
+    background-size: 87% 87%;
+    background-repeat: no-repeat;
+    box-shadow: 1px 1px 5px 0.2px black;
+}
+
+.mycustpiccontainer:hover{
+    box-shadow: none;
+    background-size: 100% 100%;
+}
+
+.myteacherbigcontainer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mydeetscontainer{
+
+    padding-bottom: 12px;
+    font-weight: 600;
+}
+
+.nameTit{
+
+    font-weight: 400;
+}
+
+.itemasachild:last-child{
+
+    text-align: left;
+    padding: 12px 12px;
+    letter-spacing: 1px;
+}
+
+
+#lebackbutton {
+    display: block;
+    position: absolute;
+
+    left: 75px;
+    width: 100px;
+    
+
+    border: none;
+    background-color: #76bc43;
+    color: #1e4488;
+    
+
+    padding: 6px 12px;
+    
+    
+    font-size: 14px;
+    font-weight: 400;
+    
+    letter-spacing: 1px;
+    box-sizing: border-box;
+
+    box-shadow: 1px 1px 5px 0.2px black;
+
+    margin-top: 6px;
+
+    
+
+    margin-bottom: 6px;
+    box-sizing: border-box;
+
+  
+}
+
+#lebackbutton:hover {
+    background-color: #1e4488;
+    color: white;
+
+    box-shadow: none;
+}
