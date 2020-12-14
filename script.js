@@ -23,6 +23,7 @@ function addMainClicks(){
 
     document.getElementById("eleasas").addEventListener("click",
         function(){
+          container3000.innerHTML = "";
             showEleAsalist();
         
         }
@@ -31,6 +32,7 @@ function addMainClicks(){
 
     document.getElementById("secasas").addEventListener("click",
         function(){
+          container3000.innerHTML = "";
             showSecAsalist();
         }
 );
@@ -44,7 +46,7 @@ function showEleAsalist(){
 
     container3000.innerHTML = "";
     container3000.appendChild(backButt);
-    addBackButtClick();
+    addBackButtClick("ele");
     container3000.appendChild(asaListPage[0])
    addExpandablesClicks2();
     // fillasaListPage();
@@ -57,7 +59,7 @@ function showSecAsalist(){
 
     container3000.innerHTML = "";
     container3000.appendChild(backButt);
-    addBackButtClick();
+    addBackButtClick("sec");
     container3000.appendChild(asaListPage2[0])
     addExpandablesClicks()
     // fillasaListPage();
@@ -66,11 +68,49 @@ function showSecAsalist(){
 
 
 
-function addBackButtClick() {
+function addBackButtClick(campus) {
     document.getElementById("lebackbutton").addEventListener("click",function () {
 
-        container3000.innerHTML = "";
-        container3000.appendChild(startPage[0])
+       // container3000.innerHTML = "";
+        //container3000.appendChild(startPage[0])
+
+        if(campus==="ele"){
+
+          let myClickableTitlesOne =  asaListPage[0].querySelectorAll(".asaitemchildtitle");
+         // myClickableTitlesOne[0].innerHTML = myClickableTitlesOne.length;
+
+         for (let i33 = 0; i33 < myClickableTitlesOne.length; i33++){
+
+          myClickableTitlesOne[i33].style.backgroundColor = "red"
+          
+          myClickableTitlesOne[i33].removeEventListener('click',
+          function(){myClickableTitlesOne[i33].style.backgroundColor = "blue"},
+          false
+      );
+         }
+
+        }else{
+
+          let myClickableTitlesOne =  asaListPage2[0].querySelectorAll(".asaitemchildtitle");
+        //  myClickableTitlesOne[0].innerHTML = myClickableTitlesOne.length;
+
+        for (let i33 = 0; i33 < myClickableTitlesOne.length; i33++){
+          myClickableTitlesOne[i33].style.backgroundColor = "red"
+          
+          myClickableTitlesOne[i33].removeEventListener('click',
+          function(){myClickableTitlesOne[i33].style.backgroundColor = "blue"},
+          false
+      );
+         }
+
+        }
+
+      
+
+     
+
+
+
 
     })
 }
@@ -619,7 +659,7 @@ function addClickEventFunc(element,i) {
 
                   }
     
-              
+             
             })
         }
         
@@ -641,7 +681,10 @@ function addClickEventFunc(element,i) {
             myClickableTitles[i].parentNode.style.height = "36px";
             myHiddenTitles[i].style.visibility = "collapse"; 
 
-          
+            myClickableTitles[i].removeEventListener('click',
+            function (){},
+            false
+            );
 
             myClickableTitles[i].addEventListener("click",
             function(){
@@ -651,16 +694,16 @@ function addClickEventFunc(element,i) {
 
                   //myClickableTitles[0].innerHTML = height;
 
-                  if(height !== "36px"){
+                  if(height === "36px"){
 
-                    myClickableTitles[i].parentNode.style.height = "36px";
-                    myHiddenTitles[i].style.visibility = "collapse";
+                    myClickableTitles[i].parentNode.style.height = "auto";
+                    myHiddenTitles[i].style.visibility = "visible";
                     height = null;
 
                   }else{
 
-                    myClickableTitles[i].parentNode.style.height = "auto";
-                    myHiddenTitles[i].style.visibility = "visible";
+                    myClickableTitles[i].parentNode.style.height = "36px";
+                    myHiddenTitles[i].style.visibility = "collapse";
                     height = null;
 
                   }
