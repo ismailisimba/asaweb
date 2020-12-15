@@ -364,3 +364,35 @@ align-items: center;
 }
 
 
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .homepage{
+    
+    
+        background-image: url("https://www.istafrica.com/uploaded/Elementary_Communications_Department/2020-21/asa/asa-ele-one-mob.jpg");
+ 
+   
+    }
+
+    #lebackbutton {
+       
+        top: -40px;
+       
+    
+      
+    }
+
+    .testDivTopEle{
+
+      
+    
+        top: 6px;
+      
+    }
+
+
+
+}

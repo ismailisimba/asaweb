@@ -1,4 +1,16 @@
 let localVar = {};
+let localVar2 = {};
+localVar2["frankenObj"] = {};
+localVar2["frankenObj"]["navObj"] = {};
+localVar2["frankenObj"]["navObj"]["currPage"] = "noneCurr";
+localVar2["frankenObj"]["navObj"]["prevPage"] = "nonePrev";
+
+ 
+
+localVar2["frankenObj"]["titleClickCheckOne"] = "notyet";
+localVar2["frankenObj"]["titleClickCheckOne2"] = "notyet2";
+
+
 let container3000 = document.getElementById("container3000");
 let startPage = container3000.querySelectorAll(".homepage");
 let asaListPage = container3000.querySelectorAll(".campusContainer");
@@ -46,9 +58,10 @@ function showEleAsalist(){
 
     container3000.innerHTML = "";
     container3000.appendChild(backButt);
-    addBackButtClick("ele");
+    
     container3000.appendChild(asaListPage[0])
    addExpandablesClicks2();
+   addBackButtClick("ele");
     // fillasaListPage();
 
 }
@@ -59,9 +72,10 @@ function showSecAsalist(){
 
     container3000.innerHTML = "";
     container3000.appendChild(backButt);
-    addBackButtClick("sec");
+    
     container3000.appendChild(asaListPage2[0])
     addExpandablesClicks()
+    addBackButtClick("sec");
     // fillasaListPage();
 
 }
@@ -69,39 +83,26 @@ function showSecAsalist(){
 
 
 function addBackButtClick(campus) {
+
     document.getElementById("lebackbutton").addEventListener("click",function () {
 
-       // container3000.innerHTML = "";
-        //container3000.appendChild(startPage[0])
+      
 
-        if(campus==="ele"){
+        if(campus === "ele" || campus === "sec"){
 
-          let myClickableTitlesOne =  asaListPage[0].querySelectorAll(".asaitemchildtitle");
-         // myClickableTitlesOne[0].innerHTML = myClickableTitlesOne.length;
+          container3000.innerHTML = "";
+          container3000.appendChild(startPage[0])
 
-         for (let i33 = 0; i33 < myClickableTitlesOne.length; i33++){
+        }else if(campus === "eleitem"){
 
-          myClickableTitlesOne[i33].style.backgroundColor = "red"
-          
-          myClickableTitlesOne[i33].removeEventListener('click',
-          function(){myClickableTitlesOne[i33].style.backgroundColor = "blue"},
-          false
-      );
-         }
+          container3000.innerHTML = "";
+          showEleAsalist();
 
-        }else{
 
-          let myClickableTitlesOne =  asaListPage2[0].querySelectorAll(".asaitemchildtitle");
-        //  myClickableTitlesOne[0].innerHTML = myClickableTitlesOne.length;
+        }else if(campus === "secitem") {
 
-        for (let i33 = 0; i33 < myClickableTitlesOne.length; i33++){
-          myClickableTitlesOne[i33].style.backgroundColor = "red"
-          
-          myClickableTitlesOne[i33].removeEventListener('click',
-          function(){myClickableTitlesOne[i33].style.backgroundColor = "blue"},
-          false
-      );
-         }
+          container3000.innerHTML = "";
+          showSecAsalist();
 
         }
 
@@ -289,7 +290,7 @@ function addClickEventFunc(element,i) {
   
                 container3000.innerHTML = "";
                 container3000.appendChild(backButt);
-                addBackButtClick();
+                addBackButtClick("secitem");
                 container3000.appendChild(asaItemContainer[0]);
   
               
@@ -402,6 +403,9 @@ function addClickEventFunc(element,i) {
             picContainer.style.height = "0px";
             picContainer.style.width = "0px";
             let temp30 = profileContainer.cloneNode(true);
+            temp30.style.width = "0px";
+            temp30.style.height = "0px";
+            temp30.innerHTML = "";
             container.appendChild(temp30);
 
 
@@ -461,7 +465,7 @@ function addClickEventFunc(element,i) {
       
                     container3000.innerHTML = "";
                     container3000.appendChild(backButt);
-                    addBackButtClick();
+                    addBackButtClick("eleitem");
                     container3000.appendChild(asaItemContainer[0]);
       
                   
@@ -576,6 +580,9 @@ function addClickEventFunc(element,i) {
                 picContainer.style.height = "0px!important";
                 picContainer.style.width = "0px!important";
                 let temp30 = profileContainer.cloneNode(true);
+                temp30.innerHTML = "";
+                temp30.style.width = "0px";
+                temp30.style.width = "0px";
                 container.appendChild(temp30);
     
     
@@ -630,7 +637,10 @@ function addClickEventFunc(element,i) {
         let myClickableTitles =  asaListPage2[0].querySelectorAll(".asaitemchildtitle");
         let myHiddenTitles =  asaListPage2[0].querySelectorAll(".asaitemchilditems");
 
-        for(let i=0; i< 2 ; i++){
+        if(localVar2.frankenObj.titleClickCheckOne2 === "notyet2"){
+
+
+          for(let i=0; i< 2 ; i++){
 
             myClickableTitles[i].parentNode.style.height = "36px";
             myHiddenTitles[i].style.visibility = "collapse"; 
@@ -662,6 +672,13 @@ function addClickEventFunc(element,i) {
              
             })
         }
+
+        localVar2.frankenObj.titleClickCheckOne2 = "done";
+
+
+        }
+
+     
         
     
 
@@ -676,15 +693,14 @@ function addClickEventFunc(element,i) {
         let myClickableTitles =  asaListPage[0].querySelectorAll(".asaitemchildtitle");
         let myHiddenTitles =  asaListPage[0].querySelectorAll(".asaitemchilditems");
 
-        for(let i=0; i< 5 ; i++){
+        if(localVar2.frankenObj.titleClickCheckOne === "notyet"){
+
+          for(let i=0; i< 5 ; i++){
 
             myClickableTitles[i].parentNode.style.height = "36px";
             myHiddenTitles[i].style.visibility = "collapse"; 
 
-            myClickableTitles[i].removeEventListener('click',
-            function (){},
-            false
-            );
+        
 
             myClickableTitles[i].addEventListener("click",
             function(){
@@ -707,10 +723,16 @@ function addClickEventFunc(element,i) {
                     height = null;
 
                   }
-    
               
             })
         }
+
+        localVar2.frankenObj.titleClickCheckOne = "done";
+
+
+        }
+
+     
         
     
 
