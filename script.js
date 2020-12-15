@@ -205,7 +205,7 @@ function fillAsaTitList (){
     tempClone.id = "secasaitemnum"+i;
     tempClone.style.visibility = "inherit";
     tempClone.className = "myLaterTitleClass";
-    secAsaTitList[0].style.visibility = "collapse";
+    //secAsaTitList[0].style.visibility = "collapse";
     addClickEventFunc(tempClone,i);
     tempClone.innerHTML = localVar.secondaryobj[i].activityTitle;
     //tempClone.innerHTML = gradeValue;
@@ -242,7 +242,7 @@ function fillAsaTitList (){
     tempClone.id = "eleasaitemnum"+i;
     tempClone.style.visibility = "inherit";
     tempClone.className = "myLaterTitleClass";
-    elAsaTitList[0].style.visibility = "collapse";
+   // elAsaTitList[0].style.visibility = "collapse";
     addClickEventFunc2(tempClone,i);
     tempClone.innerHTML = localVar.elementaryobj[i].activityTitle;
 
